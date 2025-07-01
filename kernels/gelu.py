@@ -16,7 +16,7 @@ def gelu_kernel(input, output, n, BLOCK_SIZE: tl.constexpr):
     out = (0.5 * row) * (1 + tanh)
     tl.store(output + offsets, out, mask = mask)
 
-def solution(input, output, n: int, m: int):
+def gelu(input, output):
     num_elements = input.numel()
     grid = lambda meta: (triton.cdiv(num_elements, meta['BLOCK_SIZE']),)
 

@@ -2,6 +2,8 @@ import triton
 import triton.language as tl
 import torch
 
+from .dropout import dropout
+
 # a sample input
 # batch_size = 2
 # seq_len = 512
@@ -96,14 +98,16 @@ def fused_embedding_kernel(
     fused_embedding = token_embedding + position_embedding
 
     # fused drop out (check correctness)
-    random = tl.rand(seed, position_embedding_offsets)
-    dropout_mask = random > p 
-    fused_embedding = tl.where(dropout_mask , fused_embedding / (1 - p), 0.0)
+    # random = tl.rand(seed, position_embedding_offsets)
+    # dropout_mask = random > p 
+    # fused_embedding = tl.where(dropout_mask , fused_embedding / (1 - p), 0.0)
+
+    fused_embedding_with_dropout = dropout(fused_embedding, 0.1, 43)
     
     output_offsets = token_idx * hidden_dim + hidden_offsets
     
     tl.store(
         output_ptr + output_offsets,
-        fused_embedding,
+        fused_embedding_with_dropout,
         mask = hidden_mask
     )
