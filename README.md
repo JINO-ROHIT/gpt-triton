@@ -18,11 +18,11 @@ This repository is an experimental worklog to implementing the gpt architecture 
 
 ## Implemented Layers
 
-1. Embedding layer [x]
-2. Dropout [x]
-3. Transfomer Block []
-4. Layer Norm [x]
-5. Linear Layer []
+1. Embedding layer - [x]
+2. Dropout - [x]
+3. Transfomer Block - []
+4. Layer Norm - [x]
+5. Linear Layer - []
 
 
 ## Benchmark Results (WIP)
