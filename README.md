@@ -2,6 +2,28 @@
 
 This repository is an experimental worklog to implementing the gpt architecture using triton. 
 
+## GPT-2 LAYER SKELETON
+
+1. Embedding layer
+2. Dropout
+3. Tranformer Block ( x 12 )
+   - layer norm
+   - MHA
+   - layer norm
+   - linear
+
+4. Layer Norm
+5. Linear Layer
+
+
+## Implemented Layers
+
+1. Embedding layer [x]
+2. Dropout [x]
+3. Transfomer Block []
+4. Layer Norm [x]
+5. Linear Layer []
+
 
 ## Benchmark Results (WIP)
 
