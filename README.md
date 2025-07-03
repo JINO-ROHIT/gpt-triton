@@ -22,7 +22,7 @@ This repository is an experimental worklog to implementing the gpt architecture 
 - [x] Dropout
 - [ ] Transformer Block
 - [x] Layer Norm
-- [ ] Linear Layer
+- [x] Linear Layer
 
 
 ## Benchmark Results (WIP)
