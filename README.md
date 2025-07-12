@@ -20,9 +20,13 @@ This repository is an experimental worklog to implementing the gpt architecture 
 
 - [x] Embedding layer
 - [x] Dropout
-- [ ] Transformer Block
+- [x] Transformer Block
 - [x] Layer Norm
 - [x] Linear Layer
+
+### TO-DO
+
+Put together the pieces.
 
 
 ## Benchmark Results (WIP)
